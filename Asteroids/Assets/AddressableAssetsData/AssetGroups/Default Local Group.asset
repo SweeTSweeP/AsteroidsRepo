@@ -25,6 +25,18 @@ MonoBehaviour:
     m_Address: SpaceShip
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 3b59f9ad91683de4182e2555d74fcd7a
+    m_Address: Asteroid
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 71cfe15bb4753ce4aa5a2ea506bb1553
+    m_Address: AsteroidChild
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4e00e02c827ffed4e967c6999361b308
+    m_Address: Enemy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2982dffb92124484eb4bc2781dd278a8, type: 2}
   m_SchemaSet:

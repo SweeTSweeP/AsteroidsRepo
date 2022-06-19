@@ -4,43 +4,37 @@ namespace Spaceship
 {
     public class SpaceshipMovement : MonoBehaviour
     {
-        private const float IncreaseSpeedCoefficient = 0.5f;
-        private const float DecreaseSpeedCoefficient = 0.3f;
+        private const float MaxSpeed = 50;
+        private const float Acceleration = 15;
         
-        [SerializeField] private float speed;
+        private float currentSpeed;
+        private Vector3 _speedVector;
 
-        private float _currentSpeed;
+        private void Start() => 
+            _speedVector.Set(0, 0, 0);
 
-        private void FixedUpdate() => 
+        private void Update() => 
             MoveShip();
 
         private void MoveShip()
         {
-            ControlSpeed();
-
-            transform.position += transform.forward * _currentSpeed * Time.deltaTime;
-            
-            CompensateSpeed();
-        }
-
-        private void ControlSpeed()
-        {
             if (Input.GetKey(KeyCode.W))
             {
-                if (_currentSpeed < speed)
-                    _currentSpeed += IncreaseSpeedCoefficient;
-            }
-            else
-            {
-                if (_currentSpeed > 0)
-                    _currentSpeed -= DecreaseSpeedCoefficient;
-            }
-        }
+                currentSpeed += Acceleration * Time.deltaTime;
+                currentSpeed = currentSpeed > MaxSpeed ? MaxSpeed : currentSpeed;
 
-        private void CompensateSpeed()
-        {
-            if (_currentSpeed < 0)
-                _currentSpeed = 0;
+                _speedVector += transform.forward * (Acceleration * Time.deltaTime);
+            }
+
+            var length = _speedVector.magnitude;
+
+            if (length > MaxSpeed)
+            {
+                _speedVector.Normalize();
+                _speedVector *= MaxSpeed;
+            }
+
+            transform.Translate(_speedVector * Time.deltaTime, Space.World);
         }
     }
 }
