@@ -37,6 +37,14 @@ MonoBehaviour:
     m_Address: Enemy
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: de84793867b31d04c90b167934df8146
+    m_Address: EnemyBullet
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2063f6fc88efce14280d0ceba56b5e17
+    m_Address: Spawner
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2982dffb92124484eb4bc2781dd278a8, type: 2}
   m_SchemaSet:

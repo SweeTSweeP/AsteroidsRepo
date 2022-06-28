@@ -1,5 +1,5 @@
-﻿using Asteroid;
-using Enemy;
+﻿using Enemy;
+using Infrastructure.Services.Collisions;
 using UnityEngine;
 
 namespace Spaceship
@@ -8,11 +8,19 @@ namespace Spaceship
     {
         private const float Speed = 200;
         private const float MaxLifeTime = 3;
+
+        private ICollisionDetector _collisionDetector;
         
         private Vector3 _direction;
         private float _lifeTime;
 
         public BulletPool BulletPool { get; set; }
+
+        private void Start() => 
+            _collisionDetector = new CollisionDetector();
+
+        private void OnEnable() => 
+            InitDirection();
 
         private void Update()
         {
@@ -23,7 +31,7 @@ namespace Spaceship
         private void FixedUpdate() => 
             transform.position += _direction * Speed * Time.deltaTime;
 
-        public void InitDirection() => 
+        private void InitDirection() => 
             _direction = transform.TransformDirection(Vector3.forward);
 
         private void WaitForEndBulletLife()
@@ -35,25 +43,15 @@ namespace Spaceship
 
         private void TryToDestroy()
         {
-            var detectedCollider = DetectCollisions();
+            var detectedCollider = _collisionDetector.DetectCollisionsWithSphere(transform);
 
             if (detectedCollider == null || detectedCollider.gameObject == gameObject) return;
             
-            var enemyDestroy = detectedCollider.gameObject.GetComponent<AsteroidDestroy>();
-            
-            if (enemyDestroy != null) enemyDestroy.TryToDestroy();
-            
+            var enemyDestroy = detectedCollider.gameObject.GetComponent<IDestroy>();
+
+            enemyDestroy?.TryToDestroy();
             Destroy(detectedCollider.gameObject);
-            
             ReturnToBulletPool();
-        }
-
-        private Collider DetectCollisions()
-        {
-            var hitColliders = new Collider[1];
-            Physics.OverlapSphereNonAlloc(transform.position, 0.1f, hitColliders);
-
-            return hitColliders[0] != null ? hitColliders[0] : null;
         }
 
         private void ReturnToBulletPool()

@@ -12,6 +12,7 @@ namespace Enemy
         private Corner _corner;
         private Vector3 _startPosition;
         private Vector3 _direction;
+        private Quaternion _rotation;
 
         private void Start()
         {
@@ -30,10 +31,12 @@ namespace Enemy
             _corner = _enemyPositioner.RandomCorner();
             _startPosition = _enemyPositioner.GetPosition(_corner);
             _direction = _enemyPositioner.GetDirection(_corner);
+            _rotation = _enemyPositioner.GetRotation(_corner);
 
             var newPosition = Camera.main.ViewportToWorldPoint(_startPosition);
 
             transform.position = new Vector3(newPosition.x, 0, newPosition.z);
+            transform.rotation = _rotation;
         }
 
         private void InitPositioner()

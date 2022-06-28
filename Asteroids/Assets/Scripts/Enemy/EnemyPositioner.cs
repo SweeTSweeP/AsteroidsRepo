@@ -7,9 +7,7 @@ namespace Enemy
 {
     public class EnemyPositioner : IEnemyPositioner
     {
-        private float _positionModificator = 0.92f;
-
-        private Corner corner;
+        private float _positionModificator = 0.935f;
 
         public Vector3 GetDirection(Corner corner) =>
             corner switch
@@ -27,6 +25,15 @@ namespace Enemy
                 Corner.UpLeft => new Vector3(0, 1 * _positionModificator, 0),
                 Corner.DownRight => new Vector3(1 * _positionModificator, 1 - _positionModificator, 0),
                 Corner.DownLeft => new Vector3(0, 1 - _positionModificator, 0)
+            };
+
+        public Quaternion GetRotation(Corner corner) =>
+            corner switch
+            {
+                Corner.UpRight => Quaternion.Euler(0, 180, 0),
+                Corner.UpLeft => Quaternion.Euler(0, 180, 0),
+                Corner.DownRight => Quaternion.Euler(Vector3.zero),
+                Corner.DownLeft => Quaternion.Euler(Vector3.zero)
             };
 
         public Corner RandomCorner()

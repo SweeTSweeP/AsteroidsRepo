@@ -1,14 +1,15 @@
 ﻿using System;
+using Enemy;
 using UnityEngine;
 
 namespace Asteroid
 {
-    public class AsteroidDestroy : MonoBehaviour
+    public class AsteroidDestroy : MonoBehaviour, IDestroy
     {
-        [SerializeField] private AsteroidType _asteroidType;
-        
+        [SerializeField] private AsteroidType asteroidType;
+
         public event Action<Vector3, AsteroidType> ObjectDestroyed;
-        
-        public void TryToDestroy() => ObjectDestroyed?.Invoke(transform.position, _asteroidType);
+
+        public void TryToDestroy() => ObjectDestroyed?.Invoke(transform.position, asteroidType);
     }
 }

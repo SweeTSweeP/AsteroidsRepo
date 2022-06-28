@@ -1,10 +1,11 @@
-﻿using Infrastructure.Loaders;
+﻿using Infrastructure.Services.Loaders;
+using Infrastructure.Services.Loaders.AssetLoad;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
 namespace Spaceship
 {
-    public class BulletPool
+    public class BulletPool : IBulletPool
     {
         private const int CountOfBullets = 15;
 

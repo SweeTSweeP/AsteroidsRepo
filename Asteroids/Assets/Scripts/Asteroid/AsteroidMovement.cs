@@ -9,8 +9,8 @@ namespace Asteroid
         [SerializeField] private AsteroidType asteroidType;
         
         private IAsteroidPositioner _asteroidPositioner;
-        
-        private float maxSpeed = 25;
+
+        private float maxSpeed = 12.5f;
         private Vector3 direction;
 
         private void Start()

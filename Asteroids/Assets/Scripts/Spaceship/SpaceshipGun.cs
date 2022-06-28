@@ -1,6 +1,8 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
-using Infrastructure.Loaders;
+using Infrastructure.Services;
+using Infrastructure.Services.Loaders;
+using Infrastructure.Services.Loaders.AssetLoad;
 using UnityEngine;
 
 namespace Spaceship
@@ -15,7 +17,7 @@ namespace Spaceship
 
         private void Start()
         {
-            _bulletPool = new BulletPool(new AssetLoader());
+            _bulletPool = new BulletPool(AllServices.Container.Single<IAssetLoader>());
             _bulletPool.InitBulletsPool(transform.position);
         }
 
@@ -36,7 +38,7 @@ namespace Spaceship
 
             preparedBullet.transform.position = transform.position;
             preparedBullet.gameObject.SetActive(true);
-            preparedBullet.InitDirection();
+            //preparedBullet.InitDirection();
 
             await UniTask.Delay(TimeSpan.FromSeconds(BulletCooldown));
 
