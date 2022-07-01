@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using Enemy;
+using UnityEngine;
 
-namespace Enemy
+namespace Infrastructure.Services.EnemyPositioner
 {
-    public interface IEnemyPositioner
+    public interface IEnemyPositioner : IService
     {
         Vector3 GetDirection(Corner corner);
         Vector3 GetPosition(Corner corner);

@@ -1,5 +1,8 @@
-using Infrastructure.Factories;
+using System;
+using Infrastructure.Services;
+using Infrastructure.Services.EnemyPositioner;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Enemy
 {
@@ -39,9 +42,7 @@ namespace Enemy
             transform.rotation = _rotation;
         }
 
-        private void InitPositioner()
-        {
-            _enemyPositioner = PositionerFactory.GetEnemyPositioner();
-        }
+        private void InitPositioner() => 
+            _enemyPositioner = AllServices.Container.Single<IEnemyPositioner>();
     }
 }

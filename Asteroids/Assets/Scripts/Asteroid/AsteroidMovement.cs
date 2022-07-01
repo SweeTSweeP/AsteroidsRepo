@@ -1,5 +1,5 @@
-using System;
-using Infrastructure.Factories;
+using Infrastructure.Services;
+using Infrastructure.Services.AsteroidPositioner;
 using UnityEngine;
 
 namespace Asteroid
@@ -15,7 +15,7 @@ namespace Asteroid
 
         private void Start()
         {
-            _asteroidPositioner = PositionerFactory.GetAsteroidPositioner();
+            _asteroidPositioner = AllServices.Container.Single<IAsteroidPositioner>();
             
             if (asteroidType == AsteroidType.Parent) transform.position = _asteroidPositioner.SpawnPosition();
             

@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace Asteroid
+namespace Infrastructure.Services.AsteroidPositioner
 {
     public class AsteroidPositioner : IAsteroidPositioner
     {

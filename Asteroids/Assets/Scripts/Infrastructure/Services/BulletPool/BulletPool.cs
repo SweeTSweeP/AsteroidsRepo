@@ -1,15 +1,18 @@
-﻿using Infrastructure.Services.Loaders;
+﻿using Infrastructure.Services.LevelClean;
 using Infrastructure.Services.Loaders.AssetLoad;
+using Infrastructure.Services.SpaceShipDataUpdate;
+using Spaceship;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Spaceship
+namespace Infrastructure.Services.BulletPool
 {
     public class BulletPool : IBulletPool
     {
-        private const int CountOfBullets = 15;
+        private const int CountOfBullets = 7;
 
-        private IAssetLoader _assetLoader;
+        private ISpaceShipDataUpdater _spaceShipDataUpdater;
+        private ILevelCleaner _levelCleaner;
         
         private Bullet[] _bulletStorage;
         private Bullet[] _usedBullets;
@@ -19,11 +22,10 @@ namespace Spaceship
         
         private int _countOfUsedBullets;
 
-        public BulletPool(IAssetLoader assetLoader) => 
-            _assetLoader = assetLoader;
-
-        public Bullet GetFreeBullet(Quaternion rotation)
+        public Bullet GetFreeBullet(Quaternion rotation, out int freeBulletCount)
         {
+            freeBulletCount = CountOfBullets - _countOfUsedBullets;
+            
             if (_countOfUsedBullets == CountOfBullets) return null;
 
             var bullet = _bulletStorage[_countOfUsedBullets];
@@ -34,6 +36,7 @@ namespace Spaceship
             bullet.transform.rotation = rotation;
             
             _countOfUsedBullets++;
+            _spaceShipDataUpdater.UpdateCountOfBullets(CountOfBullets - _countOfUsedBullets);
             
             return bullet;
         }
@@ -41,6 +44,7 @@ namespace Spaceship
         public void ReturnBulletToPool(Bullet bullet)
         {
              _countOfUsedBullets--;
+             _spaceShipDataUpdater.UpdateCountOfBullets(CountOfBullets - _countOfUsedBullets);
             
             bullet.gameObject.SetActive(false);
             bullet.transform.position = _startPosition;
@@ -50,11 +54,16 @@ namespace Spaceship
 
         public void InitBulletsPool(Vector3 initPosition)
         {
-            var bulletAsset = _assetLoader.LoadAsset(Constants.BulletName);
+            var assetLoader = AllServices.Container.Single<IAssetLoader>();
+            var bulletAsset = assetLoader.LoadAsset(Constants.BulletName);
+            _spaceShipDataUpdater = AllServices.Container.Single<ISpaceShipDataUpdater>();
+            _spaceShipDataUpdater.UpdateCountOfBullets(CountOfBullets - _countOfUsedBullets);
+            _levelCleaner = AllServices.Container.Single<ILevelCleaner>();
             _startPosition = initPosition;
             _bulletStorage = new Bullet[CountOfBullets];
             _usedBullets = new Bullet[CountOfBullets];
             _parent = new GameObject("Bullets").transform;
+            _levelCleaner.AddObjectToCollector(_parent.gameObject);
 
             for (var i = 0; i < CountOfBullets; i++)
             {

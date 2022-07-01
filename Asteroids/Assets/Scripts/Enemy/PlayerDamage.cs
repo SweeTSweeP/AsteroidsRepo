@@ -1,5 +1,6 @@
-﻿using System;
+﻿using Infrastructure.Services;
 using Infrastructure.Services.Collisions;
+using Infrastructure.Services.Player;
 using UnityEngine;
 
 namespace Enemy
@@ -7,9 +8,13 @@ namespace Enemy
     public class PlayerDamage : MonoBehaviour
     {
         private ICollisionDetector _collisionDetector;
-        
-        private void Start() => 
-            _collisionDetector = new CollisionDetector();
+        private IPlayerDeathIndicator _playerDeathIndicator;
+
+        private void Start()
+        {
+            _collisionDetector = AllServices.Container.Single<ICollisionDetector>();
+            _playerDeathIndicator = AllServices.Container.Single<IPlayerDeathIndicator>();
+        }
 
         private void Update() => 
             TryToDestroyPlayer();
@@ -18,8 +23,11 @@ namespace Enemy
         {
             var collisionObject = _collisionDetector.DetectCollisionsWithSphere(transform, 1.5f);
 
-            if (collisionObject != null && collisionObject.CompareTag(Constants.PlayerTag)) 
+            if (collisionObject != null && collisionObject.CompareTag(Constants.PlayerTag))
+            {
                 Destroy(collisionObject.transform.root.gameObject);
+                _playerDeathIndicator.PlayerDie();
+            }
         }
     }
 }

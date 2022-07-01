@@ -1,28 +1,34 @@
 using System;
 using Cysharp.Threading.Tasks;
 using Enemy;
+using Infrastructure.Services;
 using Infrastructure.Services.Collisions;
+using Infrastructure.Services.Score;
+using Infrastructure.Services.SpaceShipDataUpdate;
 using UnityEngine;
 
 namespace Spaceship
 {
     public class LaserBeam : MonoBehaviour
     {
-        private const float LaserCoolDown = 2;
+        private const float LaserCoolDown = 6;
         private const float LaserAttackTime = 0.75f;
+        private const int MaxChargeCount = 3;
         
         [SerializeField] private GameObject laserBeam;
         [SerializeField] private Transform tail;
         [SerializeField] private Transform head;
 
         private ICollisionDetector _collisionDetector;
+        private ISpaceShipDataUpdater _spaceShipDataUpdater;
+        private IScoreUpdater _scoreUpdater;
 
         private float _currentLaserCooldown;
-        private bool _isGunPrepared;
         private bool _isShooting;
+        private int _chargeCount;
 
         private void Start() => 
-            _collisionDetector = new CollisionDetector();
+            InitServices();
 
         private void Update()
         {
@@ -30,34 +36,52 @@ namespace Spaceship
             TryToShoot();
         }
 
+        private void InitServices()
+        {
+            _scoreUpdater = AllServices.Container.Single<IScoreUpdater>();
+            _collisionDetector = AllServices.Container.Single<ICollisionDetector>();
+            _spaceShipDataUpdater = AllServices.Container.Single<ISpaceShipDataUpdater>();
+            _spaceShipDataUpdater.UpdateCountOfLaser(_chargeCount);
+        }
+
         private void PrepareGun()
         {
-            if (_isGunPrepared) return;
+            if (_chargeCount >= MaxChargeCount) return;
 
-            if (!_isGunPrepared && _currentLaserCooldown < LaserCoolDown)
+            if (_chargeCount < MaxChargeCount && _currentLaserCooldown < LaserCoolDown)
+            {
                 _currentLaserCooldown += Time.deltaTime;
+            }
             else
-                _isGunPrepared = true;
+            {
+                _chargeCount++;
+                _currentLaserCooldown = 0;
+                _spaceShipDataUpdater.UpdateCountOfLaser(_chargeCount);
+            }
         }
 
         private void TryToShoot()
         {
-            if (! _isShooting && _isGunPrepared && Input.GetKey(KeyCode.E)) Shoot();
-            
+            if (Input.GetKey(KeyCode.E))
+                if (!_isShooting && _chargeCount > 0)
+                    Shoot();
+
             if (_isShooting) DestroyReachedObjects();
         }
 
         private async void Shoot()
         {
+            if (_isShooting) return;
+            
             _isShooting = true;
             laserBeam.SetActive(true);
+            _chargeCount--;
+            _spaceShipDataUpdater.UpdateCountOfLaser(_chargeCount);
 
             await UniTask.Delay(TimeSpan.FromSeconds(LaserAttackTime));
             
             laserBeam.SetActive(false);
             _isShooting = false;
-            _isGunPrepared = false;
-            _currentLaserCooldown = 0;
         }
 
         private void DestroyReachedObjects()
@@ -71,8 +95,15 @@ namespace Spaceship
                 if (destroyObject == null) continue;
                 
                 destroyObject.TryToDestroy();
+                NotifyScore(reachedCollider);
                 Destroy(reachedCollider.gameObject);
             }
+        }
+
+        private void NotifyScore(Collider reachedCollider)
+        {
+            Enum.TryParse(reachedCollider.tag, out EnemyTag enemyTag);
+            _scoreUpdater.UpdateScore(enemyTag);
         }
     }
 }

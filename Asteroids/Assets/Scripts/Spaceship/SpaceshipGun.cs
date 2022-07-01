@@ -1,29 +1,41 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
 using Infrastructure.Services;
-using Infrastructure.Services.Loaders;
-using Infrastructure.Services.Loaders.AssetLoad;
+using Infrastructure.Services.BulletPool;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Spaceship
 {
     public class SpaceshipGun : MonoBehaviour
     {
         private const float BulletCooldown = 0.3f;
+        private const int CountOfBullets = 7;
 
-        private BulletPool _bulletPool;
+        private IBulletPool _bulletPool;
+        private int _currentCountOfBullets = CountOfBullets;
 
         private bool _isShooting;
 
         private void Start()
         {
-            _bulletPool = new BulletPool(AllServices.Container.Single<IAssetLoader>());
+            _bulletPool = AllServices.Container.Single<IBulletPool>();
             _bulletPool.InitBulletsPool(transform.position);
         }
 
-        private void Update()
+        private void Update() => 
+            TryToShoot();
+
+        private void TryToShoot()
         {
-            if (Input.GetKey(KeyCode.Space)) Shoot();
+            if (Input.GetKey(KeyCode.Space))
+            {
+                Shoot();
+            }
+            else
+            {
+                if (_currentCountOfBullets == 0) _isShooting = false;
+            }
         }
 
         private async void Shoot()
@@ -32,13 +44,12 @@ namespace Spaceship
 
             _isShooting = true;
             
-            var preparedBullet = _bulletPool.GetFreeBullet(transform.rotation);
+            var preparedBullet = _bulletPool.GetFreeBullet(transform.rotation, out _currentCountOfBullets);
 
             if (preparedBullet == null) return;
 
             preparedBullet.transform.position = transform.position;
             preparedBullet.gameObject.SetActive(true);
-            //preparedBullet.InitDirection();
 
             await UniTask.Delay(TimeSpan.FromSeconds(BulletCooldown));
 

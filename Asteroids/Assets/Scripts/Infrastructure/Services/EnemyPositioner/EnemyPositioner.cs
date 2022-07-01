@@ -1,9 +1,9 @@
 ﻿using System;
+using Enemy;
 using UnityEngine;
-
 using Random = UnityEngine.Random;
 
-namespace Enemy
+namespace Infrastructure.Services.EnemyPositioner
 {
     public class EnemyPositioner : IEnemyPositioner
     {
@@ -16,6 +16,7 @@ namespace Enemy
                 Corner.UpLeft => new Vector3(1, 0, 0),
                 Corner.DownRight => new Vector3(-1, 0, 0),
                 Corner.DownLeft => new Vector3(1, 0, 0),
+                _ => Vector3.zero
             };
 
         public Vector3 GetPosition(Corner corner) =>
@@ -24,7 +25,8 @@ namespace Enemy
                 Corner.UpRight => new Vector3(1 * _positionModificator, 1 * _positionModificator, 0),
                 Corner.UpLeft => new Vector3(0, 1 * _positionModificator, 0),
                 Corner.DownRight => new Vector3(1 * _positionModificator, 1 - _positionModificator, 0),
-                Corner.DownLeft => new Vector3(0, 1 - _positionModificator, 0)
+                Corner.DownLeft => new Vector3(0, 1 - _positionModificator, 0),
+                _ => Vector3.zero
             };
 
         public Quaternion GetRotation(Corner corner) =>
@@ -33,7 +35,8 @@ namespace Enemy
                 Corner.UpRight => Quaternion.Euler(0, 180, 0),
                 Corner.UpLeft => Quaternion.Euler(0, 180, 0),
                 Corner.DownRight => Quaternion.Euler(Vector3.zero),
-                Corner.DownLeft => Quaternion.Euler(Vector3.zero)
+                Corner.DownLeft => Quaternion.Euler(Vector3.zero),
+                _ => Quaternion.Euler(Vector3.zero)
             };
 
         public Corner RandomCorner()

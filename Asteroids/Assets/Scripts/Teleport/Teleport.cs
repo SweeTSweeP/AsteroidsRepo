@@ -39,25 +39,37 @@ namespace Teleport
         {
             if (currentPosition.x >= 1f && currentPosition.y >= 1f)
             {
-                transform.position = new Vector3(-_areaTopRightCorner.x * _positionModificator, 0, -_areaTopRightCorner.z * _positionModificator);
+                transform.position = new Vector3(
+                    -_areaTopRightCorner.x * _positionModificator, 
+                    0,
+                    -_areaTopRightCorner.z * _positionModificator);
                 return true;
             }
 
             if (currentPosition.x <= 0f && currentPosition.y <= 0f)
             {
-                transform.position = new Vector3(_areaTopRightCorner.x * _positionModificator, 0, _areaTopRightCorner.z * _positionModificator);
+                transform.position = new Vector3(
+                    _areaTopRightCorner.x * _positionModificator, 
+                    0,
+                    _areaTopRightCorner.z * _positionModificator);
                 return true;
             }
 
             if (currentPosition.x >= 1f && currentPosition.y <= 0f)
             {
-                transform.position = new Vector3(-_areaTopRightCorner.x * _positionModificator, 0, _areaTopRightCorner.z * _positionModificator);
+                transform.position = new Vector3(
+                    -_areaTopRightCorner.x * _positionModificator, 
+                    0,
+                    _areaTopRightCorner.z * _positionModificator);
                 return true;
             }
 
             if (currentPosition.x <= 0f && currentPosition.y >= 1f)
             {
-                transform.position = new Vector3(_areaTopRightCorner.x * _positionModificator, 0, -_areaTopRightCorner.z * _positionModificator);
+                transform.position = new Vector3(
+                    _areaTopRightCorner.x * _positionModificator,
+                    0,
+                    -_areaTopRightCorner.z * _positionModificator);
                 return true;
             }
 
@@ -68,7 +80,8 @@ namespace Teleport
         {
             if (currentPosition.x >= 1f)
             {
-                transform.position = new Vector3(-_areaTopRightCorner.x * _positionModificator, 0, transform.position.z);
+                transform.position =
+                    new Vector3(-_areaTopRightCorner.x * _positionModificator, 0, transform.position.z);
                 return true;
             }
 

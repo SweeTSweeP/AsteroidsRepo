@@ -1,4 +1,5 @@
 ﻿using System;
+using Infrastructure.Services;
 using Infrastructure.Services.Collisions;
 using UnityEngine;
 
@@ -18,7 +19,7 @@ namespace Enemy
         public Vector3 Direction { get; set; }
 
         private void Start() => 
-            _collisionDetector = new CollisionDetector();
+            _collisionDetector = AllServices.Container.Single<ICollisionDetector>();
 
         private void Update()
         {

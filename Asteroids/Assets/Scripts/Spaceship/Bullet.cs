@@ -1,5 +1,9 @@
-﻿using Enemy;
+﻿using System;
+using Enemy;
+using Infrastructure.Services;
+using Infrastructure.Services.BulletPool;
 using Infrastructure.Services.Collisions;
+using Infrastructure.Services.Score;
 using UnityEngine;
 
 namespace Spaceship
@@ -10,6 +14,7 @@ namespace Spaceship
         private const float MaxLifeTime = 3;
 
         private ICollisionDetector _collisionDetector;
+        private IScoreUpdater _scoreUpdater;
         
         private Vector3 _direction;
         private float _lifeTime;
@@ -17,7 +22,7 @@ namespace Spaceship
         public BulletPool BulletPool { get; set; }
 
         private void Start() => 
-            _collisionDetector = new CollisionDetector();
+            InitServices();
 
         private void OnEnable() => 
             InitDirection();
@@ -30,6 +35,12 @@ namespace Spaceship
 
         private void FixedUpdate() => 
             transform.position += _direction * Speed * Time.deltaTime;
+
+        private void InitServices()
+        {
+            _collisionDetector = AllServices.Container.Single<ICollisionDetector>();
+            _scoreUpdater = AllServices.Container.Single<IScoreUpdater>();
+        }
 
         private void InitDirection() => 
             _direction = transform.TransformDirection(Vector3.forward);
@@ -50,8 +61,15 @@ namespace Spaceship
             var enemyDestroy = detectedCollider.gameObject.GetComponent<IDestroy>();
 
             enemyDestroy?.TryToDestroy();
+            NotifyScore(detectedCollider);
             Destroy(detectedCollider.gameObject);
             ReturnToBulletPool();
+        }
+
+        private void NotifyScore(Collider detectedCollider)
+        {
+            Enum.TryParse(detectedCollider.tag, out EnemyTag enemyTag);
+            _scoreUpdater.UpdateScore(enemyTag);
         }
 
         private void ReturnToBulletPool()

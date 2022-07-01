@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Asteroid
   - LaserBeam
+  - EnemyShip
+  - AsteroidChild
   layers:
   - Default
   - TransparentFX

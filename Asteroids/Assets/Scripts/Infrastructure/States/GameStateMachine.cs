@@ -15,9 +15,9 @@ namespace Infrastructure.States
         {
             _states = new Dictionary<Type, IState>
             {
-                [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader, services, curtain),
-                [typeof(LoadLevelState)] = new LoadLevelState(this, curtain, services),
-                [typeof(GameLoopState)] = new GameLoopState(),
+                [typeof(BootstrapState)] = new BootstrapState(this, services, curtain),
+                [typeof(LoadLevelState)] = new LoadLevelState(this, curtain, services, sceneLoader),
+                [typeof(GameLoopState)] = new GameLoopState(this, services, curtain),
             };
         }
 
