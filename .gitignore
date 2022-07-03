@@ -7,8 +7,8 @@ Asteroids/Library
 Asteroids/.idea
 Asteroids/Assembly-CSharp.csproj
 Asteroids/Assembly-CSharp-Editor.csproj
-Asteroids/KnowledgeIsPower.sln
-Asteroids/KnowledgeIsPower.csproj
+Asteroids/Asteroids.sln
+Asteroids/Asteroids.csproj
 Asteroids/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll
 
 Asteroids/obj
@@ -21,7 +21,7 @@ Asteroids/ProjectSettings/ProjectVersion.txt
 Asteroids/Packages/manifest.json
 Asteroids/Packages/packages-lock.json
 Asteroids/ProjectSettings/PackageManagerSettings.asset
-Asteroids/KnowledgeIsPower.sln.DotSettings.user
+Asteroids/Asteroids.sln.DotSettings.user
 
 *.csproj
 
@@ -41,8 +41,8 @@ Asteroids/Library
 Asteroids/.idea
 Asteroids/Assembly-CSharp.csproj
 Asteroids/Assembly-CSharp-Editor.csproj
-Asteroids/KnowledgeIsPower.sln
-Asteroids/KnowledgeIsPower.csproj
+Asteroids/Asteroids.sln
+Asteroids/Asteroids.csproj
 Asteroids/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll
 
 Asteroids/obj
@@ -55,7 +55,7 @@ Asteroids/ProjectSettings/ProjectVersion.txt
 Asteroids/Packages/manifest.json
 Asteroids/Packages/packages-lock.json
 Asteroids/ProjectSettings/PackageManagerSettings.asset
-Asteroids/KnowledgeIsPower.sln.DotSettings.user
+Asteroids/Asteroids.sln.DotSettings.user
 
 *.csproj
 
