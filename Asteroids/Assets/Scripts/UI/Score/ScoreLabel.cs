@@ -1,6 +1,5 @@
-﻿using System;
-using Infrastructure.Services;
-using Infrastructure.Services.Score;
+﻿using Infrastructure.Services.Score;
+using Infrastructure.Services.ServiceLocator;
 using TMPro;
 using UnityEngine;
 

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Infrastructure.Services;
+
 using Infrastructure.Services.Loaders.SceneLoad;
-using UI;
+using Infrastructure.Services.ServiceLocator;
+using UI.Curtain;
 
 namespace Infrastructure.States
 {

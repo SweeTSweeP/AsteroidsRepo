@@ -1,8 +1,8 @@
 ﻿using Asteroid;
 using Enemy;
-using Infrastructure.Services;
-using Infrastructure.Services.Loaders;
+using Infrastructure.Enums;
 using Infrastructure.Services.Loaders.AssetLoad;
+using Infrastructure.Services.ServiceLocator;
 using UnityEngine;
 
 namespace Spawners

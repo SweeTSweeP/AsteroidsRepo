@@ -1,0 +1,16 @@
+{
+    "name": "com.arcade_asteroids.services.asteroid_positioner",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e4075a87b8701cc4194e2ee77af92237"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

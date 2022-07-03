@@ -1,8 +1,7 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
-using Infrastructure.Services;
-using Infrastructure.Services.Loaders;
 using Infrastructure.Services.Loaders.AssetLoad;
+using Infrastructure.Services.ServiceLocator;
 using UnityEngine;
 
 namespace Enemy

@@ -1,4 +1,4 @@
-﻿namespace Asteroid
+﻿namespace Infrastructure.Enums
 {
     public enum AsteroidType
     {

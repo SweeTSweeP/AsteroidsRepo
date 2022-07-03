@@ -1,4 +1,5 @@
 ﻿using System;
+using Infrastructure.Services.ServiceLocator;
 
 namespace Infrastructure.Services.Score
 {

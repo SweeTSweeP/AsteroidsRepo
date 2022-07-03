@@ -1,0 +1,17 @@
+{
+    "name": "com.arcade_asteroids.services.enemy_positioner",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f0c2150932a8e6643b7d5022f4af875f",
+        "GUID:e4075a87b8701cc4194e2ee77af92237"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

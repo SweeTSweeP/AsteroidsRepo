@@ -1,7 +1,8 @@
-﻿using Infrastructure.Services.LevelClean;
+﻿using Bullets;
+using Infrastructure.Services.LevelClean;
 using Infrastructure.Services.Loaders.AssetLoad;
 using Infrastructure.Services.SpaceShipDataUpdate;
-using Spaceship;
+using Infrastructure.Services.ServiceLocator;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -73,7 +74,7 @@ namespace Infrastructure.Services.BulletPool
 
                 var bullet = _bulletStorage[i].GetComponent<Bullet>();
 
-                if (bullet != null) bullet.BulletPool = this;
+                if (bullet != null) bullet.BulletDestroyed += ReturnBulletToPool;
 
                 _bulletStorage[i].gameObject.SetActive(false);
             }

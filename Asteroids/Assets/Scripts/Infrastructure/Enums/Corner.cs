@@ -1,4 +1,4 @@
-﻿namespace Enemy
+﻿namespace Infrastructure.Enums
 {
     public enum Corner
     {

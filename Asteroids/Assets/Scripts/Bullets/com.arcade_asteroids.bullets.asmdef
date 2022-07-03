@@ -1,0 +1,20 @@
+{
+    "name": "com.arcade_asteroids.bullets",
+    "rootNamespace": "",
+    "references": [
+        "GUID:69fbf67888a49f24e8c2e8060511f69c",
+        "GUID:c5b7a798e25e72a4289d2267660b1724",
+        "GUID:c533e935ca0c8a64f93c453d6dbe1f8a",
+        "GUID:f0c2150932a8e6643b7d5022f4af875f",
+        "GUID:e4075a87b8701cc4194e2ee77af92237"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Infrastructure.Services.ServiceLocator;
+using UnityEngine;
 
 namespace Infrastructure.Services.Collisions
 {

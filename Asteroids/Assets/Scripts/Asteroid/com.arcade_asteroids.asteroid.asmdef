@@ -1,0 +1,19 @@
+{
+    "name": "com.arcade_asteroids.asteroid",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e4075a87b8701cc4194e2ee77af92237",
+        "GUID:69fbf67888a49f24e8c2e8060511f69c",
+        "GUID:7d3f2afe9784ec6448fd2ff1d8397839",
+        "GUID:f0c2150932a8e6643b7d5022f4af875f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

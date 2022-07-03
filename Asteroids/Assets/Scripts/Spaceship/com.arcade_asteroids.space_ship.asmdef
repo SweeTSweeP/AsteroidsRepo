@@ -1,0 +1,23 @@
+{
+    "name": "com.arcade_asteroids.space_ship",
+    "rootNamespace": "",
+    "references": [
+        "GUID:69fbf67888a49f24e8c2e8060511f69c",
+        "GUID:c533e935ca0c8a64f93c453d6dbe1f8a",
+        "GUID:c5b7a798e25e72a4289d2267660b1724",
+        "GUID:3db7716f3ca2f7145b73537153e7af65",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:44bf89a8ac815ab4aa08ecbc3a066fbe",
+        "GUID:e4075a87b8701cc4194e2ee77af92237",
+        "GUID:d07182dfd7840b24abbd492ad0dbf8a2"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

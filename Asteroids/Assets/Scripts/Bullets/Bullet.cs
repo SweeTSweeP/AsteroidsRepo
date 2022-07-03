@@ -1,12 +1,11 @@
 ﻿using System;
 using Enemy;
-using Infrastructure.Services;
-using Infrastructure.Services.BulletPool;
 using Infrastructure.Services.Collisions;
 using Infrastructure.Services.Score;
+using Infrastructure.Services.ServiceLocator;
 using UnityEngine;
 
-namespace Spaceship
+namespace Bullets
 {
     public class Bullet : MonoBehaviour
     {
@@ -19,7 +18,7 @@ namespace Spaceship
         private Vector3 _direction;
         private float _lifeTime;
 
-        public BulletPool BulletPool { get; set; }
+        public event Action<Bullet> BulletDestroyed;
 
         private void Start() => 
             InitServices();
@@ -75,7 +74,7 @@ namespace Spaceship
         private void ReturnToBulletPool()
         {
             _lifeTime = 0;
-            BulletPool.ReturnBulletToPool(this);
+            BulletDestroyed?.Invoke(this);
         }
     }
 }

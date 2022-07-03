@@ -8,8 +8,9 @@ using Infrastructure.Services.Loaders.AssetLoad;
 using Infrastructure.Services.Player;
 using Infrastructure.Services.RestartButton;
 using Infrastructure.Services.Score;
+using Infrastructure.Services.ServiceLocator;
 using Infrastructure.Services.SpaceShipDataUpdate;
-using UI;
+using UI.Curtain;
 
 namespace Infrastructure.States
 {

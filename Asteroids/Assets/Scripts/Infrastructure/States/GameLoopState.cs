@@ -1,7 +1,8 @@
 ﻿using Infrastructure.Services;
 using Infrastructure.Services.LevelClean;
 using Infrastructure.Services.RestartButton;
-using UI;
+using Infrastructure.Services.ServiceLocator;
+using UI.Curtain;
 
 namespace Infrastructure.States
 {

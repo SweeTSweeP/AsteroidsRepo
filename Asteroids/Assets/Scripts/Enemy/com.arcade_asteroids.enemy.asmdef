@@ -1,0 +1,23 @@
+{
+    "name": "com.arcade_asteroids.enemy",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c5b7a798e25e72a4289d2267660b1724",
+        "GUID:4e3de3e1943545044a1b059c0347d42a",
+        "GUID:7b7fbb92a531b7944ac21ec7d3a3d8d9",
+        "GUID:f0c2150932a8e6643b7d5022f4af875f",
+        "GUID:3ae7a0105250bde4b9090d565e7274ae",
+        "GUID:e4075a87b8701cc4194e2ee77af92237",
+        "GUID:ae9b7590ea272f14ba980d593ca4c8ef",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

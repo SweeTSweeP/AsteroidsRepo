@@ -1,5 +1,5 @@
 ﻿using Infrastructure.States;
-using UI;
+using UI.Curtain;
 using UnityEngine;
 
 namespace Infrastructure

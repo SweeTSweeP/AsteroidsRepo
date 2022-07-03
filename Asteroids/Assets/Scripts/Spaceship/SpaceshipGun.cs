@@ -2,6 +2,7 @@
 using Cysharp.Threading.Tasks;
 using Infrastructure.Services;
 using Infrastructure.Services.BulletPool;
+using Infrastructure.Services.ServiceLocator;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

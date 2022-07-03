@@ -1,4 +1,5 @@
 ﻿using System;
+using Infrastructure.Services.ServiceLocator;
 using UnityEngine;
 
 namespace Infrastructure.Services.SpaceShipDataUpdate

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI
+namespace UI.Curtain
 {
     [RequireComponent(typeof(Image))]
     public class Curtain : MonoBehaviour

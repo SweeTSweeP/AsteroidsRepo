@@ -1,0 +1,28 @@
+{
+    "name": "com.arcade_asteroids.game_state_machine",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e4075a87b8701cc4194e2ee77af92237",
+        "GUID:7d3f2afe9784ec6448fd2ff1d8397839",
+        "GUID:3db7716f3ca2f7145b73537153e7af65",
+        "GUID:c5b7a798e25e72a4289d2267660b1724",
+        "GUID:3ae7a0105250bde4b9090d565e7274ae",
+        "GUID:8f4f6bb9ab7a0094fb17d1a793024689",
+        "GUID:4e3de3e1943545044a1b059c0347d42a",
+        "GUID:7b7fbb92a531b7944ac21ec7d3a3d8d9",
+        "GUID:7e6000a541f9fc14d856fb6b636ed6f9",
+        "GUID:c533e935ca0c8a64f93c453d6dbe1f8a",
+        "GUID:44bf89a8ac815ab4aa08ecbc3a066fbe",
+        "GUID:fe18a36dbb1541e49bf58f52b481bb22",
+        "GUID:ae9b7590ea272f14ba980d593ca4c8ef"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

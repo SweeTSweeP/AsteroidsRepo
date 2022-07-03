@@ -1,6 +1,6 @@
-﻿using Infrastructure.Services;
-using Infrastructure.Services.Player;
+﻿using Infrastructure.Services.Player;
 using Infrastructure.Services.Score;
+using Infrastructure.Services.ServiceLocator;
 using TMPro;
 using UnityEngine;
 

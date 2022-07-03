@@ -1,7 +1,7 @@
-﻿using Infrastructure.Services;
-using Infrastructure.Services.Loaders.SceneLoad;
+﻿using Infrastructure.Services.Loaders.SceneLoad;
+using Infrastructure.Services.ServiceLocator;
 using Infrastructure.States;
-using UI;
+using UI.Curtain;
 
 namespace Infrastructure
 {

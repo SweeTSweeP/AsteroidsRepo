@@ -1,5 +1,5 @@
 ﻿using System;
-using Enemy;
+using Infrastructure.Enums;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

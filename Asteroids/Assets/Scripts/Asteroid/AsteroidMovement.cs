@@ -1,5 +1,6 @@
-using Infrastructure.Services;
+using Infrastructure.Enums;
 using Infrastructure.Services.AsteroidPositioner;
+using Infrastructure.Services.ServiceLocator;
 using UnityEngine;
 
 namespace Asteroid

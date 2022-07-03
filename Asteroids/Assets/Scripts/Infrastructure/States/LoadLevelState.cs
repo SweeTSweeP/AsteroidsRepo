@@ -1,8 +1,8 @@
-﻿using Infrastructure.Services;
-using Infrastructure.Services.LevelClean;
+﻿using Infrastructure.Services.LevelClean;
 using Infrastructure.Services.Loaders.AssetLoad;
 using Infrastructure.Services.Loaders.SceneLoad;
-using UI;
+using Infrastructure.Services.ServiceLocator;
+using UI.Curtain;
 using UnityEngine;
 
 namespace Infrastructure.States

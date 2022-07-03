@@ -1,5 +1,6 @@
 ﻿using Infrastructure.Services;
 using Infrastructure.Services.RestartButton;
+using Infrastructure.Services.ServiceLocator;
 using UI.EndGameScreen;
 using UnityEngine;
 using UnityEngine.UI;

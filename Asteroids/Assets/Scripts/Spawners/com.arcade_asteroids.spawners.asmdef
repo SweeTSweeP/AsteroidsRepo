@@ -1,0 +1,21 @@
+{
+    "name": "com.arcade_asteroids.spawners",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e4075a87b8701cc4194e2ee77af92237",
+        "GUID:4e3de3e1943545044a1b059c0347d42a",
+        "GUID:c20ff2d3dd2d4c94c89f9d2f7ddff1ed",
+        "GUID:ae9b7590ea272f14ba980d593ca4c8ef",
+        "GUID:69fbf67888a49f24e8c2e8060511f69c",
+        "GUID:f0c2150932a8e6643b7d5022f4af875f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,4 +1,5 @@
-﻿using Enemy;
+﻿using Infrastructure.Enums;
+using Infrastructure.Services.ServiceLocator;
 using UnityEngine;
 
 namespace Infrastructure.Services.EnemyPositioner

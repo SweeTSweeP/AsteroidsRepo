@@ -1,6 +1,6 @@
-﻿using Infrastructure.Services;
-using Infrastructure.Services.Collisions;
+﻿using Infrastructure.Services.Collisions;
 using Infrastructure.Services.Player;
+using Infrastructure.Services.ServiceLocator;
 using UnityEngine;
 
 namespace Enemy

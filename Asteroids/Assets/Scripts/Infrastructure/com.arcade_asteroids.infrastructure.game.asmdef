@@ -1,0 +1,19 @@
+{
+    "name": "com.arcade_asteroids.infrastructure.game",
+    "rootNamespace": "",
+    "references": [
+        "GUID:4e3de3e1943545044a1b059c0347d42a",
+        "GUID:eec3ac5eaf0d14c4c9e255231d9bf342",
+        "GUID:fe18a36dbb1541e49bf58f52b481bb22",
+        "GUID:e4075a87b8701cc4194e2ee77af92237"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

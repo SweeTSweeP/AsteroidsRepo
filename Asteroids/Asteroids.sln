@@ -5,13 +5,57 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniTask", "UniTask.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniTask.Linq", "UniTask.Linq.csproj", "{5d25e330-9d5b-e3c5-6543-6336b63b5997}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{82132670-eb45-3602-7ea2-855fcd841b8f}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.services.score_updater", "com.arcade_asteroids.services.score_updater.csproj", "{da258048-654b-3452-c30c-d0dac1321aee}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.space_ship", "com.arcade_asteroids.space_ship.csproj", "{15e16ea2-ba58-85b5-5249-3d815a77a0ad}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.ui", "com.arcade_asteroids.ui.csproj", "{8828efaa-8647-1ef9-f60c-3ec32676209e}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.services.space_ship_data_updater", "com.arcade_asteroids.services.space_ship_data_updater.csproj", "{657a1452-1d06-be2c-eb0b-790d264b02bd}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.spawners", "com.arcade_asteroids.spawners.csproj", "{11fe67d7-16f9-d234-991e-05d1b4c46bed}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.services.enemy_positioner", "com.arcade_asteroids.services.enemy_positioner.csproj", "{c263b2be-81c1-4248-25f1-3461e462a75b}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniTask.DOTween", "UniTask.DOTween.csproj", "{c3fe5a32-55e9-ebe1-3910-045365840687}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.game_state_machine", "com.arcade_asteroids.game_state_machine.csproj", "{d79437a1-26b3-7291-27af-1f5f99ed678d}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.services.player_death", "com.arcade_asteroids.services.player_death.csproj", "{bc19d7bd-8005-53cb-615d-b0fbd39de55a}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.services.collisions", "com.arcade_asteroids.services.collisions.csproj", "{aaaa8e36-f30e-6eed-5843-72364a2de0f6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.constants", "com.arcade_asteroids.constants.csproj", "{a6f91bc8-1ce5-13d4-f474-c3964750efcb}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.enums", "com.arcade_asteroids.enums.csproj", "{887a068d-b0a3-77fd-c95e-7cb3525fb08b}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.enemy", "com.arcade_asteroids.enemy.csproj", "{ceea08e1-079b-3ea9-d960-4a3200624569}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.services.bullet_pool", "com.arcade_asteroids.services.bullet_pool.csproj", "{576557dd-3df6-0ad1-1271-dc78b24f6a77}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniTask.TextMeshPro", "UniTask.TextMeshPro.csproj", "{73276a89-0749-d536-5aa6-7be3526f1e98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.infrastructure.game", "com.arcade_asteroids.infrastructure.game.csproj", "{b5c74926-4b0d-3678-728d-82261afea638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.services.service_locator", "com.arcade_asteroids.services.service_locator.csproj", "{b98bf5ef-220a-7b73-e052-0e58e208e549}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.services.level_clean", "com.arcade_asteroids.services.level_clean.csproj", "{c9f7586b-af06-69fa-9a67-70fe7819f04c}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.services.asteroid_positioner", "com.arcade_asteroids.services.asteroid_positioner.csproj", "{b1fc1a05-0915-ada0-2547-ba11b5a0d622}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.bullets", "com.arcade_asteroids.bullets.csproj", "{cd3c8f77-bd73-6964-8cfd-8271aadd8487}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{82132670-eb45-3602-7ea2-855fcd841b8f}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.services.loaders", "com.arcade_asteroids.services.loaders.csproj", "{8cb747ce-f43a-41a1-894d-3c8dd9a4538b}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.asteroid", "com.arcade_asteroids.asteroid.csproj", "{57df310c-f70a-1a86-b381-b626901b1d4a}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.teleport", "com.arcade_asteroids.teleport.csproj", "{fd4fe6c6-cccb-c259-9b2b-d70aef0e7894}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniTask.Addressables", "UniTask.Addressables.csproj", "{ea70f462-9f7a-f019-d104-d139cd879f54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.arcade_asteroids.services.restart_button_trigger", "com.arcade_asteroids.services.restart_button_trigger.csproj", "{e953f895-1de1-5a33-b9f0-150a854d5ddc}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniTask.Editor", "UniTask.Editor.csproj", "{52e33a70-e647-d983-7ab8-1bda5d2f9931}"
 EndProject
@@ -28,14 +72,58 @@ Global
 		{0e6324ac-355f-d289-5695-ee975b4f80f4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5d25e330-9d5b-e3c5-6543-6336b63b5997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5d25e330-9d5b-e3c5-6543-6336b63b5997}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{82132670-eb45-3602-7ea2-855fcd841b8f}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82132670-eb45-3602-7ea2-855fcd841b8f}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{da258048-654b-3452-c30c-d0dac1321aee}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{da258048-654b-3452-c30c-d0dac1321aee}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15e16ea2-ba58-85b5-5249-3d815a77a0ad}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15e16ea2-ba58-85b5-5249-3d815a77a0ad}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8828efaa-8647-1ef9-f60c-3ec32676209e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8828efaa-8647-1ef9-f60c-3ec32676209e}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{657a1452-1d06-be2c-eb0b-790d264b02bd}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{657a1452-1d06-be2c-eb0b-790d264b02bd}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11fe67d7-16f9-d234-991e-05d1b4c46bed}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11fe67d7-16f9-d234-991e-05d1b4c46bed}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{c263b2be-81c1-4248-25f1-3461e462a75b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{c263b2be-81c1-4248-25f1-3461e462a75b}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{c3fe5a32-55e9-ebe1-3910-045365840687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{c3fe5a32-55e9-ebe1-3910-045365840687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{d79437a1-26b3-7291-27af-1f5f99ed678d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{d79437a1-26b3-7291-27af-1f5f99ed678d}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{bc19d7bd-8005-53cb-615d-b0fbd39de55a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{bc19d7bd-8005-53cb-615d-b0fbd39de55a}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{aaaa8e36-f30e-6eed-5843-72364a2de0f6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{aaaa8e36-f30e-6eed-5843-72364a2de0f6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{a6f91bc8-1ce5-13d4-f474-c3964750efcb}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{a6f91bc8-1ce5-13d4-f474-c3964750efcb}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{887a068d-b0a3-77fd-c95e-7cb3525fb08b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{887a068d-b0a3-77fd-c95e-7cb3525fb08b}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ceea08e1-079b-3ea9-d960-4a3200624569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ceea08e1-079b-3ea9-d960-4a3200624569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{576557dd-3df6-0ad1-1271-dc78b24f6a77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{576557dd-3df6-0ad1-1271-dc78b24f6a77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73276a89-0749-d536-5aa6-7be3526f1e98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{73276a89-0749-d536-5aa6-7be3526f1e98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{b5c74926-4b0d-3678-728d-82261afea638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{b5c74926-4b0d-3678-728d-82261afea638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{b98bf5ef-220a-7b73-e052-0e58e208e549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{b98bf5ef-220a-7b73-e052-0e58e208e549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{c9f7586b-af06-69fa-9a67-70fe7819f04c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{c9f7586b-af06-69fa-9a67-70fe7819f04c}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{b1fc1a05-0915-ada0-2547-ba11b5a0d622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{b1fc1a05-0915-ada0-2547-ba11b5a0d622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{cd3c8f77-bd73-6964-8cfd-8271aadd8487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{cd3c8f77-bd73-6964-8cfd-8271aadd8487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82132670-eb45-3602-7ea2-855fcd841b8f}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82132670-eb45-3602-7ea2-855fcd841b8f}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8cb747ce-f43a-41a1-894d-3c8dd9a4538b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8cb747ce-f43a-41a1-894d-3c8dd9a4538b}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57df310c-f70a-1a86-b381-b626901b1d4a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57df310c-f70a-1a86-b381-b626901b1d4a}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{fd4fe6c6-cccb-c259-9b2b-d70aef0e7894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{fd4fe6c6-cccb-c259-9b2b-d70aef0e7894}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ea70f462-9f7a-f019-d104-d139cd879f54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ea70f462-9f7a-f019-d104-d139cd879f54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{e953f895-1de1-5a33-b9f0-150a854d5ddc}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{e953f895-1de1-5a33-b9f0-150a854d5ddc}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52e33a70-e647-d983-7ab8-1bda5d2f9931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{52e33a70-e647-d983-7ab8-1bda5d2f9931}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{a210d756-093b-a432-e032-f4dba21c1726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
